@@ -24,6 +24,7 @@ body {
 
 .navbar-nav  {
 	gap: 30px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
