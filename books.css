@@ -4,6 +4,8 @@ img.styling{
     padding: 10% ;
     margin-left: 10%;
     float: center;
+    border:10%;
+    background-color: rgba(250, 235, 215, 0.226);
 }
 h1.styling{
     padding-top: 10%;
