@@ -11,26 +11,19 @@
         <style>
             /*Document level style sheet*/
             .bg-img{
-                background-image: url('backgr.png');
-                background-size: cover;
+                background: #FFDD88;
+                background: linear-gradient(0deg, rgba(203, 131, 100,0.4) 0%, rgba(255, 235, 178,1) 100%);
             }
             
             .formIn{
-                width: 40%;
+                float: right;
                 height: 100vh;
-                float: right;color: white;
-                background-color: rgba(0,0,0,0.5);
+                font-size: 20px;
             }
             
-            label{
+            h2, label{
                 display: block;
-                margin-left: 30px;
-            }
-
-            h2{
-                margin-top: 20px;
-                margin-left: 60px;
-                font-family: 'Courier New', Courier, monospace;
+                margin-left: 100px;
             }
 
             #myfont {font-family: serif;}
@@ -49,6 +42,14 @@
                 position:relative;
                 bottom:0;
             }
+
+            h1{
+                text-align: center;
+                color: white;
+                padding: 10%;
+                font-weight:bold;
+                font-size:60px;
+           }
             
         </style>
     </head>
@@ -92,49 +93,59 @@
                 </ul>
             </div>
         </nav>
+
+        <div style="background-image: url('myback.png');background-size: cover;">
+            <h1>Contact Us</h1>
+        </div>
             
         <div class="formIn">
             <!--Form-->
             <form action="mailto:novelsworm@gmail.com" id="myfont" method="post" calss="was-validated">
-                <h2 class="display-5 fw-bold">Contact Us</h2><br>
-
-                <label for="email">
-                    Email
-                    <input type="text" placeholder="Enter email" name="email" required><br><br>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </label>
-
-                <label>
-                    How can we help?<br>
-                    <textarea name="comments" cols="30" rows="5" style="margin-top: 10px;">
-
-                    </textarea><br><br>
-                </label>
-
-                <label>
-                    How was your experimant in our website?<br>
-                    <select name="rate" style="height: 30px; margin-top: 10px;" >
-                        <option class="size">Interesting</option>
-                        <option class="size">Good</option>
-                        <option class="size">Bad</option>
-                        <option class="size">awful</option>
-                    </select>
-                </label><br>
-
-                <label>
-                    <input type="submit" value="Send"><br><br>
-                </label>
-
-                <!--Social media icon images as links-->
+                <br><br>
+                <div class="row">
+                    <div class="col">
+                        <h2 class="display-5">Get in touch✨</h2><br>
+                        <label for="email">
+                            Email
+                            <input type="text" placeholder="Enter email" name="email" required><br><br>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </label>
+        
+                        <label>
+                            How can we help?<br>
+                            <textarea name="comments" cols="30" rows="5" style="margin-top: 10px;">
+        
+                            </textarea><br><br>
+                        </label>
+        
+                        <label>
+                            How was your experimant in our website?<br>
+                            <select name="rate" style="height: 30px; margin-top: 10px;" >
+                                <option class="size">Interesting</option>
+                                <option class="size">Good</option>
+                                <option class="size">Bad</option>
+                                <option class="size">awful</option>
+                            </select>
+                        </label><br>
+        
+                        <label>
+                            <input type="submit" value="Send"><br><br>
+                        </label>
+                    </div>
+                    <div class="col" style="margin-top: 10%; margin-right: 10%;">
+                        <!--Social media icon images as links-->
                 <label style="text-align: center;">
-                    If you have any queries you can contact us through<br><br>
-                    <a href="mailto:novelsworm@gmail.com"><img src="email2.png"  alt="Gmail" style="width: 40px; height: 40px;"></a> 
-                    <a href="https://www.instagram.com/novels_worm/"><img src="insta2.png"  alt="Instagram" style="width: 30px; height: 30px;"></a>
-                    <a href="https://wa.me/+96872220821"><img src="whats2.png" alt="WhatsApp" style="width: 30px; height: 30px;"></a>  
+                    <h3>If you have any queries you can contact us through</h3>
+                    <br><br>
+                    <a href="mailto:novelsworm@gmail.com"><img src="email1.png"  alt="Gmail" style="width: 90px; height: 90px;"></a> 
+                    <a href="https://www.instagram.com/novels_worm/"><img src="insta1.png"  alt="Instagram" style="width: 70px; height: 70px;"></a>
+                    <a href="https://wa.me/+96872220821"><img src="whats1.png" alt="WhatsApp" style="width: 70px; height: 70px;"></a>  
                 </label>
+                    </div>
+                </div>
             </form>
-        </div>
+        </div><br>
 
         <!--Footer-->
         <footer class="text-center text-white" style="background-color: #14171a">
