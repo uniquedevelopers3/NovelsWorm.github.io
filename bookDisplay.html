@@ -7,7 +7,7 @@
         <link rel="icon" type="icon/x-image" href="icon.png">
         <!--styling sheet-->
         <link rel="stylesheet" href="books.css">
-        <script src="calclation.js"></script>
+        
         <style>
             .navbar-nav{gap: 30px;}
         </style>
@@ -157,5 +157,15 @@
                 </div>
               </footer>
         </div><!--container div-->
+
+        <!-- Javascript calculation-->
+        <script>
+            var count = 0;
+            function calculatePrice(){
+                count +=1;
+            
+                document.getElementById("count").value=count * 0.500;
+            }
+          </script>
     </body>
 </html>
