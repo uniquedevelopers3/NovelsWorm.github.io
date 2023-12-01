@@ -14,7 +14,7 @@ var checkCollide = setInterval(function(){
     if(bookLeft < 20 && bookLeft > -40 && wormTop >= 130){
         book.style.animation = "none";
         if (Math.floor(counter/100) >= 10){
-            alert("a reader can never escape from books (: ,\n but you scored "+Math.floor(counter/100)+
+            alert("A reader can never escape from books (: ,\n but you scored "+Math.floor(counter/100)+
             "\nso you can get a 10% discount, enter the code : novelSworm10 ");
             book.style.animation = "book 2s infinite linear"
             document.getElementById("score").style.display ='none';
