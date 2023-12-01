@@ -7,6 +7,7 @@
         <link rel="icon" href="icon.png">
 
         <style>
+            /*Document level style sheet*/
             body {
                 font-family: 'Nunito', sans-serif;
                 background: #FFDD88;
@@ -16,6 +17,7 @@
                 gap: 30px;
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
+
            h1{
              text-align: center; 
             background-size: cover;
@@ -25,14 +27,38 @@
             font-size:60px;
            }
 
+           .photo-gallery{
+                margin-top: 20px;
+                text-align: center;
+            }
+
+           .photo-gallery img{
+                max-width: 100%;
+                max-height: 300px;
+                transition: opacity 1s ease-in-out;
+                margin: auto;
+                
+            }
+
+           .photo-gallery img:not(:first-child){
+                display: none;
+            }
+
             footer {
                 position:relative;
                 bottom:0;
             }
 
+            .interesting{
+                height:60px; 
+                width:60px; 
+                margin-left: 40%;
+            }
+
         </style>
 
     </head>
+
     <body>
 <!--Navbar-->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded-top">
@@ -74,60 +100,118 @@
         </nav>
 
 <!---------------------------------------------------------------------------------------------------------------->
-<!--header-->
+        <!--header-->
         <div style= " background-image: url('background.jpg')" >         
             <h1 background-color:rgba(255, 249, 234, 1);> Novel<img src="headicon.png" height="60px" width="60px">Worm  </h1>
         </div>
+        <br><br><br>
 
-        
-
-<!--//////////////////////////////////////////////////////////////////////////-->
-        <br>
-        <br>
-        <br>
-
+    <!--Home content-->
     <div class="homecontent">
+        <!--Images-->
         <div class="row">
-            <div class="col" style="text-align: center;"><img src="sparkles.png" style="height:40px; width:40px;"> </div>
-            <div class="col" style="text-align: center;"><img src="book.png" style="height:40px; width:40px;"> </div>
-            <div class="col" style="text-align: center;"><img src="brain.png" style="height:40px; width:40px;"> </div>
-            
+            <div class="col" style="text-align: center;"><img src="sparkles.png" style="height:40px; width:40px;"></div>
+            <div class="col" style="text-align: center;"><img src="book.png" style="height:40px; width:40px;"></div>
+            <div class="col" style="text-align: center;"><img src="brain.png" style="height:40px; width:40px;"></div>
         </div>
+
         <div class="row"></div>
-        <br>
-        <br>
+        <br><br>
+        <!--Images comments-->
         <div class="row">
-            <div class="col"><p style="font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;">
+            <div class="col">
+                <p style="font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;">
                 It's said that<br>" a reader lives a<br>
                 thousand lives before<br>
                 he dies,the man who<br> never reads lives<br> only one "
-            </p>
+                </p>
             </div>
+
             <div class="col">
                 <p style="font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;">
                 Common reading genre<br>
                 are: Mystrey, Fantasy,<br>
                 Science fiction, Thrillers<br>
                 and horror
-            </p>
+                </p>
             </div>
+
             <div class="col">
                 <p style="font-family: 'Courier New', Courier, monospace; font-weight: bold; text-align: center;">
                 Reading reduces stress,<br>
                 prompts relaxation,<br>
                 improve brain functionality.<br>
-            </p>
+                </p>
             </div>
         </div>
-            </div>
         <br><br>
-            <footer class="text-center text-white" style="background-color:#14171a">
-                <div class="text-center p-3" style="background-color: rgba(117, 117, 117, 0.179)">
-                  © 2023 Copyright:
-                  <a class="text-white" href=""> NovelsWorm.com </a>
+
+        <!--Photo gallery showing the website's novels-->
+        <div class="photo-gallery">
+            <h3>Enjoy reading our novels!!</h3><br>
+            <img src="arab.jpg" alt="book 1">
+            <img src="longlegs.jpg" alt="book 2">
+            <img src="Yousuf.png" alt="book 3">
+            <img src="phantom.jpg" alt="book 4">
+        </div><br><br>
+
+        <!--Image linkes to the new pages with description-->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="questionnaire.html"><img src="form.png" alt="form" class="interesting"></a><br><br>
+                    <p style="text-align: center;">You will help us improve our website to the best by sharing your thoughts</p>
                 </div>
-              </footer>
-    </div>
-    
+                <div class="col">
+                    <a href="calculation.html"><img src="discount.png" alt="discount" class="interesting"></a><br><br>
+                    <p style="text-align: center;">Do you have a discount code? Enter it and you will pay less!!</p>
+                </div>
+                <div class="col">
+                    <a href="funpage.html"><img src="game.png" alt="game" class="interesting"></a><br><br>
+                    <p style="text-align: center;">Are you feelling bored? Do you want something to change your mood? Here is our little game that you're gonna like!!</p>
+                </div>
+            </div>
+        </div><br>
+
+        <!--Welcome mesage with the date and time-->
+        <div>
+            <marquee behavior="scroll" direction="left">
+                Welcome to the NovelsWorm website! Today is <span id="current-date"></span>, and the time is <span id="current-time"></span>
+            </marquee>
+        </div><br>
+
+        <!--Footer-->
+        <footer class="text-center text-white" style="background-color:#14171a">
+            <div class="text-center p-3" style="background-color: rgba(117, 117, 117, 0.179)">
+              © 2023 Copyright:
+                <a class="text-white" href=""> NovelsWorm.com </a>
+            </div>
+        </footer>
+
+        <!--javascript-->
+        <script>
+            //Function that controls the gallery displayment
+            function rotatePhotos(){
+                const imgs = document.querySelectorAll('.photo-gallery img');
+                const index = Array.from(imgs).findIndex(img => img.style.display !== 'none');
+                const index2 = (index + 1) %imgs.length;
+                imgs[index].style.display = 'none';
+                imgs[index2].style.display = 'block';
+            }
+            
+            //Function to update the date and time in the welcoming message
+            function timeUpdate(){
+                const currentDate = document.getElementById('current-date');
+                const currentTime = document.getElementById('current-time');
+                const myCurrentDate = new Date().toLocaleDateString();
+                const myCurrentTime = new Date().toLocaleTimeString();
+                currentDate.textContent = myCurrentDate;
+                currentTime.textContent = myCurrentTime;
+            }
+            
+            setInterval(rotatePhotos, 3000); //Update the photo every 3 seconds
+
+            setInterval(timeUpdate, 1000); //Update the time every second
+        </script>
     </body>
 </html>
