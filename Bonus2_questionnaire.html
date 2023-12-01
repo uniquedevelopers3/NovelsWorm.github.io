@@ -99,7 +99,7 @@
                 <h2 class="display-5 fw-bold" style="margin-top: 5%;">Feedback form</h2><br>
                 <p style="font-size: 23px;">Help us improve our services</p><br>
 
-                <form action="mailto:novelsworm@gmail.com" method="post" name="feedback" onsubmit="return FormValidation()"><!--Checking input validation when submit button is clicked using the functtion FormValidation()-->
+                <form action="mailto:novelsworm@gmail.com" method="post" name="feedback" onsubmit="return formValidation()"><!--Checking input validation when submit button is clicked using the functtion formValidation()-->
 
                     <!--Asking for customer's email (input type: text)-->
                     <label for="E-mail">Email address</label>
@@ -164,7 +164,7 @@
         <!--javascript: using jQuery-->
         <script>
             //Function that check user's inputs and show alert if any input is wrong
-            function FormValidation() {
+            function formValidation() {
                 let email = document.forms["feedback"]["Email"];
                 let male = document.forms["feedback"]["gender"].value == "male";
                 let female = document.forms["feedback"]["gender"].value == "female";
@@ -236,8 +236,8 @@
             //Using jQuery to prevent form submission if validation fails
             $(document).ready(function(){
                 $("form[name='feedback']").submit(function(event){
-                    if(!FormValidation()){
-                        //If FormValidation returns false, prevent form submission
+                    if(!formValidation()){
+                        //If formValidation returns false, prevent form submission
                         event.preventDefault();
                     }
                 });
