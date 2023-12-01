@@ -19,7 +19,7 @@ var checkCollide = setInterval(function(){
             book.style.animation = "book 2s infinite linear"
             document.getElementById("score").style.display ='none';
         }else{
-            alert("a reader can never escape from books (: \ntry again! (press CTRL + R to retry)");
+            alert("A reader can never escape from books (: \ntry again! (press CTRL + R to retry)");
             book.style.animation = "book 2s infinite linear"
             counter = 0;
             document.getElementById("score").style.display ='none';
