@@ -1,0 +1,44 @@
+*{
+    overflow-x: hidden;
+}
+.game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid aliceblue;
+    padding-left: 10px;
+    margin: auto; 
+    background-color: aliceblue; 
+}
+#worm{
+    width: 28px;
+    height: 40px;
+    background-image: url("worm.png");
+    position: relative;
+    top: 150px;
+}
+.animate{
+    animation: jump 0.4s linear;
+}
+@keyframes jump {
+    0%{ top: 150px;}
+    20%{top: 90px;}
+    60%{top: 60px;}
+    90%{top: 90px;}
+    100%{top: 150px;}
+}
+
+#book {
+    background-image: url("gamebook.png");
+    width: 20px;
+    height:20px;
+    position: relative;
+    top: 130px;
+    left: 500px;
+    bottom: 30px;
+    animation: block 2s infinite linear;
+}
+@keyframes block{
+    0%{left: 500px;}
+    100%{left: -40px;}
+}
+
