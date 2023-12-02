@@ -1,6 +1,7 @@
 *{
     overflow-x: hidden;
 }
+/*the game area*/
 .game{
     width: 500px;
     height: 200px;
@@ -9,6 +10,7 @@
     margin: auto; 
     background-color: aliceblue; 
 }
+/*the jumping character*/
 #worm{
     width: 28px;
     height: 40px;
@@ -16,6 +18,8 @@
     position: relative;
     top: 150px;
 }
+
+/*animation for the jumping character*/
 .animate{
     animation: jump 0.4s linear;
 }
@@ -27,6 +31,7 @@
     100%{top: 150px;}
 }
 
+/*the moving across the game area character*/
 #book {
     background-image: url("gamebook.png");
     width: 20px;
@@ -37,6 +42,7 @@
     bottom: 30px;
     animation: block 2s infinite linear;
 }
+/*the animation for the book character*/
 @keyframes block{
     0%{left: 500px;}
     100%{left: -40px;}
