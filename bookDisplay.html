@@ -141,11 +141,45 @@
                             <input type="submit" value="Submit review" style="float: right;"/>
                         </label>
                     </div>
-
                     </form>
                 </div>
             </div>
-            
+
+            <!--dynamic table-->
+            <div>
+             <table id="table" style="border: 2px solid black;">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+             </table>
+             <br>
+             <!--form for adding Info-->
+             <form onsubmit="addData(); return false;">
+                <label for="title"> Title:</label>
+                <input type="text" id="title" required>
+                
+                <label for="author"> Author:</label>
+                <input type="text" id="author" required>
+                
+                <label for="genre"> Genre: </label>
+                <input type="text" id="genre" required>
+
+                <button type="submit"> Add</button>
+             </form>
+             <br>
+             <!--form for searching-->
+             <form onsubmit="searchData(); return false;">
+                <label for="searchQuery">Search:</label>
+                <input type="text" id="searchQuery" required>
+                <button type="submit">Search</button>
+             </form>
+            </div>
+            <br>
             <!--footer-->
             <footer class="text-center text-white" style="background-color: #14171a">
                 <div class="text-center p-3" style="background-color: rgba(117, 117, 117, 0.179)">
@@ -157,18 +191,19 @@
 
         <script>
             function calculatePrice() {
-    count += 1;
-    var totalPrice = (count * 0.500).toFixed(2);
-    document.getElementById("totalPrice").innerText = totalPrice + " OR";
-    return totalPrice; // Add this line to return the calculated total price
-}
+                count += 1;
+                var totalPrice = (count * 0.500).toFixed(2);
+                document.getElementById("totalPrice").innerText = totalPrice + " OR";
+                return totalPrice; // Add this line to return the calculated total price
+            }
 
         
-        function addToCart() {
-    var totalPrice = calculatePrice(); // Get the total price
-    window.location.href = 'cart.html?total=' + totalPrice; // Redirect to cart.html with total price parameter
-}
+            function addToCart() {
+                var totalPrice = calculatePrice(); // Get the total price
+                window.location.href = 'cart.html?total=' + totalPrice; // Redirect to cart.html with total price parameter
+            }
 
         </script>
+        <script src="table.js"></script>
     </body>
 </html>
