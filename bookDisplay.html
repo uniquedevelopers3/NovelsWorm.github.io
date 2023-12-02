@@ -146,8 +146,9 @@
             </div>
 
             <!--dynamic table-->
-            <div>
-             <table id="table" style="border: 2px solid black;">
+            <div class="container rounded" style="font-size: 20px; border: 5px dashed rgba(0,0,0, 0.65); background-color: rgba(128, 73, 45, 0.4); color: rgb(255, 255, 255) ; ">
+            <h2 style="text-align: center; font-weight: bold; color: white;"> Novel<img src="headicon.png" height="60px" width="60px"> Info</h2> 
+            <table id="table" class="table">
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -160,24 +161,26 @@
              <br>
              <!--form for adding Info-->
              <form onsubmit="addData(); return false;">
-                <label for="title"> Title:</label>
+                <label> Title:</label>
                 <input type="text" id="title" required>
                 
-                <label for="author"> Author:</label>
+                <label> Author:</label>
                 <input type="text" id="author" required>
                 
-                <label for="genre"> Genre: </label>
+                <label> Genre: </label>
                 <input type="text" id="genre" required>
 
-                <button type="submit"> Add</button>
+                <button type="submit" class="btn btn-outline-light" style="width: 100px; height: 40px; border-radius: 10px; font-weight: bold; margin-left: 2%;"> Add</button>
              </form>
              <br>
              <!--form for searching-->
              <form onsubmit="searchData(); return false;">
-                <label for="searchQuery">Search:</label>
-                <input type="text" id="searchQuery" required>
-                <button type="submit">Search</button>
+                <p>Do want to search for a specific book ?</p>
+                <label for="searchTitle">Enter title:</label>
+                <input type="text" id="searchTitle" required>
+                <button type="submit" class="btn btn-outline-light" style="width: 100px; height: 40px; border-radius: 10px; font-weight: bold; margin-left: 2%;"> Search </button>
              </form>
+             <br>
             </div>
             <br>
             <!--footer-->
