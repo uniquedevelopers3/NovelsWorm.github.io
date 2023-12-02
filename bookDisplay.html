@@ -275,7 +275,7 @@ function searchData(){
 
 // function to display search results
 function displayResults(results, tableName){
-    var tableBody = document.getElementById("table").getElementsByTagName('tbody')[0];
+    var tableBody = document.getElementById(tableName).getElementsByTagName('tbody')[0];
     tableBody.innerHTML = "";
 
     results.forEach(function (result){
