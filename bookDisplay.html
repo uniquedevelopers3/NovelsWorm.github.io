@@ -11,6 +11,10 @@
         
         <style>
             .navbar-nav{gap: 30px;}
+
+            .text {
+            width: 180px;
+        }
         </style>
     </head>
 <!----------------------------------------------------------------------------------------------------------------->
@@ -54,14 +58,14 @@
             </nav>
             <!--header-->
             <div >         
-                <h1 style="text-align: center; 
+                <h1 style=" 
                 background-image: url('disply_bg.png'); 
                 color: white;
                 padding: 10%;
                 font-family: 'Courier New';
                 font-weight: bold;
                 float:center;
-                text-align: center;"> Display</h1>
+                text-align: center; "> Display</h1>
                 </div>
 
             <!--the book disply-->
@@ -93,25 +97,25 @@
                     <div class="col">
                         <table>
                             <tr>
-                                <td>الشبح</td>
-                                <th> الرواية</th>
+                                <td class="td">الشبح</td>
+                                <th class="th"> الرواية</th>
                             </tr>
                             <tr>
-                                <td>جو نيسبو</td>
-                                <th> المؤلف</th>
+                                <td class="td">جو نيسبو</td>
+                                <th class="th"> المؤلف</th>
                             </tr>
                             <tr>
-                                <td>جريمة\ بوليسي</td>
-                                <th>التصنيف</th>
+                                <td class="td">جريمة\ بوليسي</td>
+                                <th class="th">التصنيف</th>
                             </tr>
                             <tr>
-                                <td>حين انتقل "هاري هول" إلى هونغ كونغ، كان يظن أنه يهرب من جروح حياته في أوسلو،
+                                <td class="td">حين انتقل "هاري هول" إلى هونغ كونغ، كان يظن أنه يهرب من جروح حياته في أوسلو،
                                      ومن مهنته كمحقق يسعى لفعل الخير. لكن ما لم يفكر فيه قد حصل؛
                                       فها هو أوليغ الصبي الذي ساعد في تربيته قد تم اعتقاله بتهمة قتل رجل. لم يصدق هاري أن أوليغ
                                      قد يكون القاتل، لذا عاد إلى أوسلو لمطاردة القاتل الحقيقي. وعلى الرغم من
                                     أنه لم يعد يعمل في سلك الشرطة، كانت لديه قضية عليه حلها. وسترسله هذه القضية إلى أعماق عالم المخدرات في المدينة،
                                      حيث ينتشر نوع جديد من المخدرات القاتلة. هذه التحريات الشخصية ستقود هاري هول لمواجهة ماضيه والحقيقة المرة المتعلقة به وبأوليغ.</td>
-                                <th>النبذة</th>
+                                <th class="th">النبذة</th>
                             </tr>
                         </table>
                     </div>
@@ -143,32 +147,32 @@
                     </div>
                     </form>
                 </div>
-            </div>
+            </div><br>
 
             <!--dynamic table-->
             <div class="container rounded" style="font-size: 20px; border: 5px dashed rgba(0,0,0, 0.65); background-color: rgba(128, 73, 45, 0.4); color: rgb(255, 255, 255) ; ">
-            <h2 style="text-align: center; font-weight: bold; color: white;"> Novel<img src="headicon.png" height="60px" width="60px"> Info</h2> 
+            <h2 style="text-align: center; font-weight: bold; color: white; margin-top: 20px;"> Novel<img src="headicon.png" height="60px" width="60px"> Info</h2> 
             <table id="table" class="table">
                 <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Genre</th>
+                        <th style="text-align: center;">Title</th>
+                        <th style="text-align: center;">Author</th>
+                        <th style="text-align: center;">Genre</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
              </table>
-             <br>
+             <br><br>
              <!--form for adding Info-->
              <form onsubmit="addData(); return false;">
-                <label> Title:</label>
-                <input type="text" id="title">
+                <label > Title:</label>
+                <input type="text" id="title" class="text" style="margin-right: 10px;">
                 
                 <label> Author:</label>
-                <input type="text" id="author">
+                <input type="text" id="author" class="text" style="margin-right: 10px;">
                 
                 <label> Genre: </label>
-                <input type="text" id="genre">
+                <input type="text" id="genre" class="text" style="margin-right: 10px;">
 
                 <button type="submit" class="btn btn-outline-light" style="width: 100px; height: 40px; border-radius: 10px; font-weight: bold; margin-left: 2%;"> Add</button>
              </form>
@@ -177,12 +181,12 @@
              <form onsubmit="searchData(); return false;">
                 <p>Do want to search for a specific book ?</p>
                 <label for="searchTitle">Enter title:</label>
-                <input type="text" id="searchTitle" >
+                <input type="text" id="searchTitle" class="text">
                 <button type="submit" class="btn btn-outline-light" style="width: 100px; height: 40px; border-radius: 10px; font-weight: bold; margin-left: 2%;"> Search </button>
              </form>
              <br>
             </div>
-            <br>
+            <br><br>
             <!--footer-->
             <footer class="text-center text-white" style="background-color: #14171a">
                 <div class="text-center p-3" style="background-color: rgba(117, 117, 117, 0.179)">
@@ -209,83 +213,88 @@
             //----------------------------------------------------------------------------------------------------------------------
 
             function novelInfo (title, author, genre){
-    this.title = title;
-    this.author = author;
-    this.genre = genre;
-}
+                this.title = title;
+                this.author = author;
+                this.genre = genre;
+            }
 
-let novelArray = [
-    new novelInfo("Phantom", "Jo Nesbo", "Crime fiction"),
-    new novelInfo("Daddy long legs", "Jean Webster", "Young adult"),
-];
+            let novelArray = [
+                new novelInfo("Phantom", "Jo Nesbo", "Crime fiction"),
+                new novelInfo("Daddy long legs", "Jean Webster", "Young adult"),
+            ];
 
-// function to disply Info of the array
-function bookDisplay(){
-    let tableBody = document.getElementById("table").getElementsByTagName('tbody')[0];
+            // function to disply Info of the array
+            function bookDisplay(){
+                let tableBody = document.getElementById("table").getElementsByTagName('tbody')[0];
 
-    novelArray.forEach(function (novelInfo){
-        var row = tableBody.insertRow();
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
+                novelArray.forEach(function (novelInfo){
+                    var row = tableBody.insertRow();
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
 
-        cell1.innerHTML = novelInfo.title;
-        cell2.innerHTML = novelInfo.author;
-        cell3.innerHTML = novelInfo.genre;
-    });
-}
+                    cell1.innerHTML = novelInfo.title;
+                    cell2.innerHTML = novelInfo.author;
+                    cell3.innerHTML = novelInfo.genre;
 
-// function to add data
-function addData(){
-    // get value from input
-    let titleValue = document.getElementById("title").value;
-    let authorValue = document.getElementById("author").value;
-    let genreValue = document.getElementById("genre").value;
+                    cell1.style.textAlign = "center";
+                    cell2.style.textAlign = "center";
+                    cell3.style.textAlign = "center";
+                });
+            }
 
-    //instance of object
-    let newNovel = new novelInfo (titleValue, authorValue, genreValue);
-    // add the new item to the array
-    novelArray.push(newNovel);
+            // function to add data
+            function addData(){
+                // get value from input
+                let titleValue = document.getElementById("title").value;
+                let authorValue = document.getElementById("author").value;
+                let genreValue = document.getElementById("genre").value;
 
-    // Clear input fields
-    document.getElementById("title").value = "";
-    document.getElementById("author").value = "";
-    document.getElementById("genre").value = "";
+                //instance of object
+                let newNovel = new novelInfo (titleValue, authorValue, genreValue);
+                // add the new item to the array
+                novelArray.push(newNovel);
 
-    //refresh the table
-    refreshBookDisplay();
-}
+                // Clear input fields
+                document.getElementById("title").value = "";
+                document.getElementById("author").value = "";
+                document.getElementById("genre").value = "";
 
-function refreshBookDisplay() {
-    var tableBody = document.getElementById("table").getElementsByTagName('tbody')[0];
-    tableBody.innerHTML = ""; // clear existing table rows
-    bookDisplay(); // disply the updated data
-}
+                //refresh the table
+                refreshBookDisplay();
+            }
 
-// function to search info
-function searchData(){
-    let searchTitle = document.getElementById("searchTitle").value;
-    // filter the array
-    let searchResult = novelArray.filter(function (novelInfo){
-            return novelInfo.title.toLowerCase().includes(searchTitle.toLowerCase());
-        });
-    // disply results:
-    displayResults(searchResult, "table");
-}
+            function refreshBookDisplay() {
+                var tableBody = document.getElementById("table").getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = ""; // clear existing table rows
+                bookDisplay(); // disply the updated data
+            }
 
-// function to display search results
-function displayResults(results, tableName){
-    var tableBody = document.getElementById(tableName).getElementsByTagName('tbody')[0];
-    tableBody.innerHTML = "";
+            // function to search info
+            function searchData(){
+                let searchTitle = document.getElementById("searchTitle").value;
+                // filter the array
+                let searchResult = novelArray.filter(function (novelInfo){
+                        return novelInfo.title.toLowerCase().includes(searchTitle.toLowerCase());
+                    });
+                // disply results:
+                displayResults(searchResult, "table");
+            }
 
-    results.forEach(function (result){
-        var row = tableBody.insertRow();
-        for(var key in result){
-            var cell = row.insertCell();
-            cell.innerHTML = result[key];
-        }
-    });
-}
+            // function to display search results
+            function displayResults(results, tableName){
+                var tableBody = document.getElementById(tableName).getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = "";
+                tableBody.style.textAlign = "center";
+
+                results.forEach(function (result){
+                    var row = tableBody.insertRow();
+                    for(var key in result){
+                        var cell = row.insertCell();
+                        cell.innerHTML = result[key];
+                    }
+                });
+            }
 
 
 
