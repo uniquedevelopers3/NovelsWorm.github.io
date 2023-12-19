@@ -1,0 +1,136 @@
+<?php
+    header('Content-Type: text/html; charset=utf-8');
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--bootstrap link-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Display</title>
+        <link rel="icon" type="icon/x-image" href="icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            .dimension{ width: 260px;
+                        height: 300px;
+                        padding: 5%;
+                        float: left;
+            }
+            
+            .name{
+                padding-top: 20%;
+                padding:5%;
+                float:center;
+                text-align: center;
+                color: rgb(67, 20, 20);
+                font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+                font-weight: bolder;
+            }
+            
+            .navbar-nav{ gap:30px}
+
+            .bookChange{
+                width: 80px;
+                height: 80px;
+                margin-right: 50px;
+            }
+
+        </style>
+    </head>
+    <body  style="background-color: rgb(203, 131, 100);" >
+        <div>
+            <!--navigation bar -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark rounded-top">
+                <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">
+                                <img style="width: 30px; height: 30px;" src="icon.png"> </a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link active" href="display.html">Display</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                <img src="cart.png" width="25px" height="24px">
+                            </a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="JoinUs.html">Join us</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactUs.html">Contact us</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link " href="aboutUs.html">About us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--header-->
+            <div >         
+            <h1 style="text-align: center; 
+            background-image: url('disply_bg.png'); 
+            color: white;
+            padding: 10%;
+            font-family: 'Courier New';
+            font-weight: bold;"> Display</h1>
+            </div>
+
+            <!--book display-->
+            <div>
+                <div class="row">
+                    <h2 class="name"> Borrowing any novel for a week will only cost 0.500 RO </h2>
+                </div> 
+                <br>
+
+                <!--Links for the three php pages-->
+                <a href="search.php" style="margin-left: 35%;"><img src="search.png" class="bookChange"></a>
+                <a href="insert.php"><img src="insert.png" class="bookChange"></a>
+                <a href="delete.php"><img src="delete.png" class="bookChange"></a><br><br>
+                
+                <div class="row">
+                    <div class="col-1"></div>
+                    <!--phantom-->
+                    <div class="col" ><a href="bookDisplay.html"><img src="phantom.jpg" class="dimension" ></a>
+                        <h1 class="name" ><a href="bookDisplay.html" class="name" style="text-decoration: none;">الشبح</a></h1></div>
+                    <!--arabstan-->
+                    <div class="col"><img src="arab.jpg" class="dimension" >
+                        <h1 class="name">عرين الأسد</h1></div>
+                    <div class="col-1"></div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-1"></div>
+                    <!--ana yosuf-->
+                    <div class="col"><img src="Yousuf.png" class="dimension" >
+                        <h1 class="name">أنا يوسف</h1></div>
+
+                    <!--daddy long legs-->
+                    <div class="col"><img src="longlegs.jpg" class="dimension" >
+                        <h1 class="name">صاحب الظل الطويل</h1></div>
+                    <div class="col-1"></div>
+                </div>
+            </div><br><br>
+
+            </div>
+            <footer class="text-center text-white" style="background-color:#14171a">
+                <div class="text-center p-3" style="background-color: rgba(117, 117, 117, 0.179)">
+                  © 2023 Copyright:
+                  <a class="text-white" href=""> NovelsWorm.com </a>
+                </div>
+              </footer>
+    
+        </div><!--the container div-->
+    </body>
+</html>
