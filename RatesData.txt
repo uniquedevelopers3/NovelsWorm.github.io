@@ -1,0 +1,1 @@
+a:4:{i:3;a:2:{s:4:"rate";s:7:"2 stars";s:6:"review";s:16:"Interesting book";}i:5;a:2:{s:4:"rate";s:7:"4 stars";s:6:"review";s:21:"I enjoyed reading it!";}i:6;a:2:{s:4:"rate";s:7:"4 stars";s:6:"review";s:13:"Good novel (;";}i:7;a:2:{s:4:"rate";s:7:"5 stars";s:6:"review";s:16:"excellent novel ";}}
