@@ -102,8 +102,8 @@
                 <div class="row">
                     <div class="col-1"></div>
                     <!--phantom-->
-                    <div class="col" ><a href="bookDisplay.html"><img src="phantom.jpg" class="dimension" ></a>
-                        <h1 class="name" ><a href="bookDisplay.html" class="name" style="text-decoration: none;">الشبح</a></h1></div>
+                    <div class="col" ><a href="bookDisplay.php"><img src="phantom.jpg" class="dimension" ></a>
+                        <h1 class="name" ><a href="bookDisplay.php" class="name" style="text-decoration: none;">الشبح</a></h1></div>
                     <!--arabstan-->
                     <div class="col"><img src="arab.jpg" class="dimension" >
                         <h1 class="name">عرين الأسد</h1></div>
