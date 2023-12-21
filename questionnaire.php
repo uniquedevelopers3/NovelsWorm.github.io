@@ -81,7 +81,6 @@
                 </ul>
             </div>
         </nav>
-
         <!--Page header-->
         <div style= " background-image: url('feed.jpg')" >         
             <h1 background-color:rgba(255, 249, 234, 1);>Questionnaire</h1>
