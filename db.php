@@ -93,7 +93,7 @@
 <!--************************************************************************************************************-->
 	<!--Page header-->
 	<div style= " background-image: url('feed.jpg')" >         
-		<h1 background-color:rgba(255, 249, 234, 1);>Payment</h1>
+		<h1 background-color:rgba(255, 249, 234, 1);>Tables</h1>
 	</div>
 	<br><br><br>
 
