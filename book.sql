@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2023 at 11:19 AM
+-- Generation Time: Dec 20, 2023 at 04:56 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `novelsworms`
+-- Database: `novelsworm`
 --
 
 -- --------------------------------------------------------
@@ -28,33 +28,24 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `book` (
-  `title` varchar(50) NOT NULL,
-  `author` varchar(50) NOT NULL,
-  `genre` varchar(20) NOT NULL
+  `name` varchar(40) NOT NULL,
+  `author` varchar(40) NOT NULL,
+  `genre` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `book`
 --
 
-INSERT INTO `book` (`title`, `author`, `genre`) VALUES
-('David Copperfield', 'Charles Dickens', 'Bildungsromane'),
-('Madame Bovary: Provincial Manners', 'Gustave Flaubert', 'Realist novel'),
-('Pride and Prejudice', 'Jane Austen', 'Classic regency'),
-('The History of Tom Jones', 'Henry Fielding', 'Novel'),
-('The Red and the Black', 'Stendhal (Henri Beyle)', 'Bildungsromane'),
-('War and Peace', 'Leo Tolstoy', 'Historical novel'),
-('Wuthering Heights', 'Emily Brontë', 'Tragedy and gothic');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `book`
---
-ALTER TABLE `book`
-  ADD KEY `title` (`title`,`author`,`genre`);
+INSERT INTO `book` (`name`, `author`, `genre`) VALUES
+('عرين الأسد', 'أسامة المسلم', 'فانتازيا'),
+('الشبح', 'جو نيسبو', 'جريمة / بوليسي'),
+('رجل الثلج', 'جو نيسبو', 'جريمة / بوليسي'),
+('صاحب الظل الطويل', 'جين ويبستر', 'أدب الناشئة'),
+('عدوي اللدود', 'جين ويبستر', 'أدب الناشئة'),
+('أنا يوسف', 'أيمن العتوم', 'تاريخي'),
+('خوف', 'أسامة المسلم', 'فانتازيا / رعب'),
+('بساتين عربستان', 'أسامة المسلم', 'فانتازيا');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
