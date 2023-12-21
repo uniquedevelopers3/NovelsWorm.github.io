@@ -24,37 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book`
+-- Table structure for table `rating`
 --
 
-CREATE TABLE `book` (
+CREATE TABLE `rating` (
   `title` varchar(50) NOT NULL,
-  `author` varchar(50) NOT NULL,
-  `genre` varchar(20) NOT NULL
+  `rate` int(1) NOT NULL,
+  `percentageofbook` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `book`
+-- Dumping data for table `rating`
 --
 
-INSERT INTO `book` (`title`, `author`, `genre`) VALUES
-('David Copperfield', 'Charles Dickens', 'Bildungsromane'),
-('Madame Bovary: Provincial Manners', 'Gustave Flaubert', 'Realist novel'),
-('Pride and Prejudice', 'Jane Austen', 'Classic regency'),
-('The History of Tom Jones', 'Henry Fielding', 'Novel'),
-('The Red and the Black', 'Stendhal (Henri Beyle)', 'Bildungsromane'),
-('War and Peace', 'Leo Tolstoy', 'Historical novel'),
-('Wuthering Heights', 'Emily Brontë', 'Tragedy and gothic');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `book`
---
-ALTER TABLE `book`
-  ADD KEY `title` (`title`,`author`,`genre`);
+INSERT INTO `rating` (`title`, `rate`, `percentageofbook`) VALUES
+('War and Peace', 3, 0.45),
+('Pride and Prejudice', 4, 0.63),
+('David Copperfield', 5, 0.77),
+('Madame Bovary: Provincial Manners', 2, 0.33),
+('Wuthering Heights', 4, 0.68),
+('The Red and the Black', 4, 0.92),
+('The History of Tom Jones', 1, 0.22);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
